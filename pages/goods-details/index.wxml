@@ -19,8 +19,11 @@
       </swiper>
     </view>
     <view class="goods-info">
-      <view class="goods-info-top-container">
-        <view class="goods-info-fx">
+      
+      <view class="goods-info-fx">
+        <view class="goods-info-top-container">
+        <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
+      <view class="characteristic">{{goodsDetail.basicInfo.characteristic}}</view>
           <view class='item left'>
             <van-icon name="share-o" size="24px" />
             <view class="icon-title">分享</view>
@@ -32,8 +35,7 @@
           </view>
         </view>
       </view>
-      <view class="goods-title">{{goodsDetail.basicInfo.name}}</view>
-      <view class="characteristic">{{goodsDetail.basicInfo.characteristic}}</view>
+      
     </view>
     <view wx:if="{{shopSubdetail}}" class="shop-container">
       <image mode="aspectFill" src="{{shopSubdetail.info.pic}}"></image>

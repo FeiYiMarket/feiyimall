@@ -61,7 +61,7 @@ swiper-item image {
 
 .goods-info-top-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 .goods-info-fx {
