@@ -151,7 +151,6 @@ module.exports = {
       <view wx:if="{{item.characteristic}}" class="characteristic van-multi-ellipsis--l2" style="-webkit-line-clamp: 1;">{{item.characteristic}}</view>
      
       </view>
-    </view>
   </view>
   <van-divider wx:if="{{ !loadingMoreHidden }}" contentPosition="center">没有更多啦</van-divider>
 </view>
