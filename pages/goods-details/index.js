@@ -991,14 +991,6 @@ Page({
             color: '#333'
           },
           {
-            x: 375,
-            y: _baseHeight + 180,
-            text: '￥' + _this.data.goodsDetail.basicInfo.minPrice,
-            textAlign: 'center',
-            fontSize: 50,
-            color: '#e64340'
-          },
-          {
             x: 352,
             y: _baseHeight + 320,
             text: '长按识别小程序码',
