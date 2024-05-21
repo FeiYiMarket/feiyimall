@@ -39,7 +39,6 @@
     "pages/invoice/list",
     "pages/invoice/apply",
     "pages/deposit/pay",
-    "pages/live/index",
     "pages/help/detail",
     "pages/help/index",
     "pages/cms/list",
@@ -69,17 +68,7 @@
     "chooseLocation"
   ],
   "subpackages": [
-    {
-      "root": "packageStreamMedia",
-      "name": "packageStreamMedia",
-      "pages": [
-        "pages/videoCall/videoCall",
-        "pages/live-anchor/index",
-        "pages/live-anchor/list",
-        "pages/live-client/list",
-        "pages/live-client/client"
-      ]
-    },
+  
     {
       "root": "packageCps",
       "name": "packageCps",
