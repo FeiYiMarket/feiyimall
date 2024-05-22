@@ -25,7 +25,7 @@
   <view wx:if="{{!incomingCallFlag}}" class="trtc-calling-index">
     <view class="trtc-calling-index-title">
       <van-icon custom-class="btn-goback" name="arrow-left" bind:click="onBack" />
-      <view class="trtc-calling-index-title title">视频客服</view>
+
     </view>
     <view class="input">
       <van-cell-group>
