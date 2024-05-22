@@ -33,23 +33,6 @@
   ],
   "subpackages": [
   
-   
-    {
-      "root": "packageFx",
-      "name": "packageFx",
-      "pages": [
-        "pages/index/index",
-        "pages/hehuorenfenxiao/index",
-        "pages/hehuorenfenxiao/fxmember",
-        "pages/apply/index",
-        "pages/apply/form",
-        "pages/myusers/index",
-        "pages/commisionLog/index",
-        "pages/report/team",
-        "pages/report/city",
-        "pages/myusers/myusers-detail"
-      ]
-    }
   ],
   "window": {
     "backgroundTextStyle": "light",
