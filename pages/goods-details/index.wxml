@@ -19,6 +19,7 @@
       <block wx:for="{{goodsAddition}}" wx:key="id"> {{item.name}}</block>
     </view>
   </van-cell>
+
   <view class="goods-des-info" id="goods-des-info">
     <view class="label-title">
       <view class="left">商品详情</view>

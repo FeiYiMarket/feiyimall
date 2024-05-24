@@ -1,0 +1,4 @@
+
+<view class="title">{{ userCode }}</view>
+<canvas class="user-code-bar" canvas-id="barcode" />
+<canvas class="user-code" canvas-id="qrcode" />

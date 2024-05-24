@@ -20,7 +20,7 @@
 <van-cell-group title="常用功能">
 
   <van-cell title="帮助中心" is-link url="/pages/help/index" />
-  <van-cell title="个人信息" is-link url="/pages/my/info-menu" />
+  <van-cell title="我的收藏" is-link url="/pages/my/fav" />
   <van-cell title="系统设置" is-link url="/pages/my/setting" />
 </van-cell-group>
 

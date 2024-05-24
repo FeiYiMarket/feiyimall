@@ -524,6 +524,9 @@ module.exports = {
   myCoupons: function myCoupons(data) {
     return request('/discounts/my', true, 'get', data);
   },
+  dynamicUserCode: function dynamicUserCode(token) {
+    return request('/user/dynamicUserCode', true, 'get', { token: token });
+  },
   mergeCouponsRules: function mergeCouponsRules() {
     return request('/discounts/merge/list', true, 'get');
   },

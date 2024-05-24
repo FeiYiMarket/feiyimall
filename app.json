@@ -5,10 +5,13 @@
     "pages/notice/show",
     "pages/yewu/index",
     "pages/goods-details/index",
-    "pages/my/index",
     "pages/help/detail",
     "pages/help/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/my/index",
+    "pages/my/setting",
+    "pages/my/user-code",
+    "pages/my/fav"
   ],
   "permission": {
     "scope.userLocation": {

@@ -4,7 +4,7 @@ Page({
 
   },
   onLoad: function (options) {
-    // options.key = 'aboutus'
+    options.key = 'about'
     this.data.key = options.key
     // 读取小程序码中的数据
     if (options && options.scene) {
