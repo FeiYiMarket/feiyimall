@@ -1,28 +1,22 @@
 <view class="header-box">
-  <view class="header-box-left">
-    <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-      <image class="avatar-img" src="{{ apiUserInfoMap.base.avatarUrl ? apiUserInfoMap.base.avatarUrl : '/images/default.png' }}" mode="aspectFill"></image>
-    </button>
-    <view class="r">
-      <view class="uid">用户ID: {{ apiUserInfoMap.base.id }}</view>
-      <view class="nick" bindtap="editNick">{{ apiUserInfoMap.base.nick ? apiUserInfoMap.base.nick : '点击设置昵称' }}</view>
-      <view wx:if="{{ apiUserInfoMap.userLevel }}" class="user-level"><van-icon name="medal-o" />{{ apiUserInfoMap.userLevel.name }}</view>
-    </view>
-  </view>
-  <view class="user-code" bindtap="goUserCode">
-    <van-icon name="qr" size="64rpx" />
-    <view class="txt">会员码</view>
+  <!-- <open-data class="avatar" type="userAvatarUrl"></open-data> -->
+  <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar-img" src="{{ userBaseInfo.avatarUrl ? userBaseInfo.avatarUrl : '/images/default.png' }}" mode="aspectFill"></image>
+  </button>
+  <view class="r">
+    <view class="uid">用户ID: {{ uid }}</view>
+    <!-- <view class="nick">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view> -->
+    <view class="nick" bindtap="editNick">{{ userBaseInfo.nick ? userBaseInfo.nick : '点击设置昵称' }}</view>
   </view>
 </view>
-
+<van-grid clickable>
+  <van-grid-item icon="balance-pay" text="开票信息" url="/pages/about/index?key=invoice" />
+</van-grid>
 <view class="space van-hairline--bottom"></view>
-
-<van-cell-group title="常用功能">
-
-  <van-cell title="帮助中心" is-link url="/pages/help/index" />
-  <van-cell title="个人信息" is-link url="/pages/my/info-menu" />
-  <van-cell title="系统设置" is-link url="/pages/my/setting" />
-</van-cell-group>
+<van-cell title="清除缓存" is-link bind:click="clearStorage" />
+<van-cell title="当前版本" value="{{version}}" />
 
 <van-dialog
   use-slot

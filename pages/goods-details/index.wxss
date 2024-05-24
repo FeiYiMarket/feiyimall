@@ -15,14 +15,12 @@ textarea {
 
 .container {
   background-color: #F2f2f2;
-  min-height: 100vh;
+  min-height: 100%;
   padding-bottom: 100rpx;
 }
 
 .scroll-container {
-  box-sizing: border-box;
   height: 100vh;
-  padding-bottom: 64rpx;
 }
 
 .tabs-container {
@@ -61,10 +59,11 @@ swiper-item image {
 
 .goods-info-top-container {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
 }
 
 .goods-info-fx {
+  bottom: 60rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,7 +199,6 @@ swiper-item image {
 
 .goods-text image {
   width: 100%;
-  margin-top: -1rpx;
 }
 
 .des-imgs {

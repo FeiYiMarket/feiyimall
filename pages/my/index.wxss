@@ -1,19 +1,16 @@
 .header-box {
-  padding-right: 32rpx;
+  padding: 32rpx;
+  padding-bottom: 64rpx;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: #333;
-}
-.header-box-left {
-  display: flex;
-  align-items: center;
 }
 .header-box .avatar {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
+  overflow: hidden;
   border-radius: 50%;
+  margin: 20rpx;
 }
 .header-box .avatar-img {
   width: 128rpx;
@@ -26,16 +23,6 @@
 .header-box .r {
   margin-left: 32rpx;
   font-size: 28rpx;
-}
-.header-box .user-code {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.header-box .user-code .txt {
-  font-size: 24rpx;
-  color: #666;
 }
 
 page,view,image,input {
@@ -156,6 +143,45 @@ page,view,image,input {
 .login-box .btn {
   margin: 88rpx 32rpx;
 }
-.user-level {
-  color: #e64340;
+.jishuzhichi {
+  margin-top: 64rpx;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+}
+.xiahuaxian {
+  color: #e76b69;
+  text-decoration:underline;
+}
+.kefu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.kefu .txt {
+  color: #646566;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+.kefu button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 99;
+}
+.qrcode {
+  width: 400rpx;
+  margin-top: 64rpx;
+  margin-left: 175rpx;
+  margin-bottom: 32rpx; 
+}
+.qrcode-txt {
+  text-align: center;
+  color:#999;
+  font-size: 24rpx;
 }

@@ -4,8 +4,6 @@
     showTitle="{{ showTitle }}"
     subtitle="{{ subtitle }}"
     showSubtitle="{{ showSubtitle }}"
-    firstDayOfWeek="{{ firstDayOfWeek }}"
-    bind:click-subtitle="onClickSubtitle"
   >
     <slot name="title" slot="title"></slot>
   </header>
@@ -33,7 +31,6 @@
       showSubtitle="{{ showSubtitle }}"
       allowSameDay="{{ allowSameDay }}"
       showMonthTitle="{{ index !== 0 || !showSubtitle }}"
-      firstDayOfWeek="{{ firstDayOfWeek }}"
       bind:click="onClickDay"
     />
   </scroll-view>
@@ -54,12 +51,12 @@
       type="danger"
       color="{{ color }}"
       custom-class="van-calendar__confirm"
-      disabled="{{ computed.getButtonDisabled(type, currentDate, minRange) }}"
+      disabled="{{ computed.getButtonDisabled(type, currentDate) }}"
       nativeType="text"
       bind:click="onConfirm"
     >
       {{
-        computed.getButtonDisabled(type, currentDate, minRange)
+        computed.getButtonDisabled(type, currentDate)
           ? confirmDisabledText
           : confirmText
       }}

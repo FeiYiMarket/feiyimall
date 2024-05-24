@@ -13,7 +13,7 @@
     bind:touchstart="onTouchStart"
     bind:touchend="onTouchEnd"
   >
-    <slot name="minus" />
+    <slot name="plus" />
   </view>
   <input
     type="{{ integer ? 'number' : 'digit' }}"
@@ -22,7 +22,6 @@
     value="{{ currentValue }}"
     focus="{{ focus }}"
     disabled="{{ disabled || disableInput }}"
-    always-embed="{{ alwaysEmbed }}"
     bindinput="onInput"
     bind:focus="onFocus"
     bind:blur="onBlur"
@@ -38,6 +37,6 @@
     bind:touchstart="onTouchStart"
     bind:touchend="onTouchEnd"
   >
-    <slot name="plus" />
+    <slot name="minus" />
   </view>
 </view>

@@ -1,81 +1,44 @@
-<van-sticky>
-<view class="search-container">
-  <view class="search" style="height:{{navHeight}}px;padding-top:{{navTop}}px">
-    <view class="search-title" src="../../images/gift.png">
-      {{mallName}}
-    </view>
-    <!-- <input placeholder-class="search-placeholder"
-      style="width:{{menuButtonObject.left-18-((132/52)*(navHeight-navTop-5))}}px" type="text" placeholder="输入关键词搜索" disabled
-      value="{{name}}" bindinput="bindinput" bindtap="goSearch"></input> -->
-  </view>
-</view>
-</van-sticky>
-<navigator wx:if="{{shopInfo}}" url="/pages/shop/select">
-  <view class="shops-container">
-    <view class="l">
-      <image src="/images/order-details/icon-address.png"></image>
-      <text>{{shopInfo.name}}</text>
-    </view>
-    <view class="r">
-      <text>切换门店</text>
-      <image src="/images/icon/next.png"></image>
-    </view>
-  </view>
-</navigator>
-<wxs module="goodsDetailPage">
-module.exports = {
-  url : function(item) {
-    if (item.supplyType == 'cps_jd') {
-      return '/packageCps/pages/goods-details/cps-jd?id=' + item.goodsId
-    } else if (item.supplyType == 'vop_jd') {
-      return '/pages/goods-details/vop?id=' + item.yyId + '&goodsId=' + item.id
-    } else if (item.supplyType == 'cps_pdd') {
-      return '/packageCps/pages/goods-details/cps-pdd?id=' + item.goodsId
-    } else if (item.supplyType == 'cps_taobao') {
-      return '/packageCps/pages/goods-details/cps-taobao?id=' + item.goodsId
-    } else {
-      return '/pages/goods-details/index?id=' + item.goodsId
-    }
-  }
-}
-</wxs>
 <view class="swiper-container">
   <swiper class="swiper1" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
     <swiper-item wx:for="{{banners}}" wx:key="id">
       <image mode="aspectFill" bindtap="tapBanner" data-url="{{item.linkUrl}}" src="{{item.picUrl}}" />
     </swiper-item>
   </swiper>
-  <view wx:if="{{goodsDynamic && show_buy_dynamic == '1' }}" class="goodsDynamic">
+  <view wx:if="{{ usersDynamicList }}" class="goodsDynamic">
     <swiper class="swiper2" autoplay circular vertical>
-      <navigator wx:for="{{goodsDynamic}}" wx:key="index" url="{{ goodsDetailPage.url(item) }}">
+      <navigator wx:for="{{usersDynamicList}}" wx:key="index" url="{{ goodsDetailPage.url(item) }}">
         <swiper-item>
           <view class="goodsDynamic-item">
             <image mode="aspectFill" src="{{item.avatarUrl}}"></image>
-            <text>{{item.nick}} 购买了 {{item.goodsName}}</text>
+            <text>{{item.nick}} 来过</text>
           </view>
         </swiper-item>
       </navigator>
     </swiper>
   </view>
 </view>
-<view class="category-container">
-  <view class="category-box">
-    <view class="category-list" wx:for="{{categories}}" wx:key="id">
-      <view class="category-column" bindtap="tabClick"
-        data-id="{{item.id}}">
-        <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
-        <view class="category-title">{{item.name}}</view>
-      </view>
-    </view>
-    <view class="category-list" wx:for="{{cmsCategories}}" wx:key="id">
-      <view class="category-column" bindtap="tabClickCms"
-        data-idx="{{ index }}">
-        <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
-        <view class="category-title">{{item.name}}</view>
-      </view>
-    </view>
+<view class="com-name">
+  <view class="l">{{ comName }}</view>
+  <view class="r">{{ siteStatisticsData.statistics.users }}位朋友来过</view>
+</view>
+<van-cell class="r" wx:if="{{ website_1 }}" title="官网" value="{{ website_1 }}" is-link bind:click="webview" data-v="{{ website_1 }}" />
+
+<van-cell-group wx:for="{{ shops }}" wx:key="id" >
+  <van-cell icon="location-o" title="{{ item.address }}" is-link data-idx="{{ index }}" bind:click="gomap" />
+  <van-cell icon="phone-o" title="{{ item.linkPhone }}" is-link data-idx="{{ index }}" bind:click="callMobile" />
+  <view wx:if="{{ qiyeweixin_open == '1' }}" class="contact">
+  <view wx:if="{{ kefu_url && kefu_corpId }}" class="item item2" bindtap="call_kefu">
+    <!-- <cell-kefu plugid='{{ wexin_plugid }}'  /> -->
+    <van-icon name="chat" color="#2f91f1" size="88rpx" />
+    <text>在线咨询</text>
+  </view>
+  <view wx:if="{{ wexin_url }}" class="item">
+    <cell-qun contactText="微信群" contactTextBlod="{{ false }}" iconBorderRadius="{{ 5 }}" url='{{ wexin_url }}'  />
   </view>
 </view>
+
+
+</van-cell-group>
 <view class="notice-box" wx:if="{{noticeList}}">
   <swiper class="notice_swiper" vertical autoplay circular interval="8000">
     <swiper-item wx:for="{{noticeList.dataList}}" wx:key="id">
@@ -86,31 +49,6 @@ module.exports = {
     </swiper-item>
   </swiper>
 </view>
-<view class="container">
-  
-  <view class="space"></view>
-  <van-divider custom-class="table-text" wx:if="{{goodsRecommend.length > 0}}"
-    contentPosition="center">
-    <image class="table-icon-tuijian" src="../../images/home/recommend.png"></image> 爆品推荐
-  </van-divider>
-  <view class="goods-container" wx:if="{{goodsRecommend.length > 0}}">
-    <view class="goods-box" wx:for="{{goodsRecommend}}" wx:key="id" bindtap="toDetailsTap" data-id="{{item.id}}" data-supplytype="{{item.supplyType}}" data-yyid="{{item.yyId}}">
-      <view class="img-box">
-        <image src="{{item.pic}}" class="image" mode="aspectFill" lazy-load="true" />
-      </view>
-      <view class="goods-title van-multi-ellipsis--l2">{{item.name}}</view>
-      <view wx:if="{{item.characteristic}}" class="characteristic van-multi-ellipsis--l2" style="-webkit-line-clamp: 1;">{{item.characteristic}}</view>
-   
-    </view>
-  </view>
+<view wx:if="{{ aboutData }}" class="content">
+  <parser html="{{aboutData.info.content}}" />
 </view>
-
-<van-overlay show="{{ adPositionIndexPop }}">
-  <view class="adPositionIndexPop">
-    <image src="{{ adPositionIndexPop.val }}" mode="widthFix" bindtap="clickAdPositionIndexPop"></image>
-    <van-icon custom-class="close" name="close" size="64rpx" color="#fff" bind:click="closeAdPositionIndexPop" />
-  </view>
-</van-overlay>
-
-<!-- 弹出编辑昵称和头像的框 -->
-<login show="{{ nickPopShow }}" avatarUrl="{{ popavatarUrl }}" name="{{ popnick }}" />

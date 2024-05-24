@@ -18,26 +18,32 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": true,
+    "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useIsolateContext": true,
+    "enableEngineNative": false,
+    "useIsolateContext": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
-    "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true,
+    "minifyWXML": true,
     "useStaticServer": true,
-    "condition": false
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
+  "libVersion": "2.19.4",
+  "appid": "wx53fd7b33bb9c478b",
+  "projectname": "2b",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
@@ -117,14 +123,12 @@
       ]
     }
   },
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  },
-  "appid": "wx53fd7b33bb9c478b",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "projectname": "天使童装"
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }

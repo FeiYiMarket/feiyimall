@@ -1,74 +1,110 @@
-# 微信小程序商城
+# 介绍
 
-微信小程序商城，微信小程序微店，长期维护版本，欢迎大家踊跃提交贡献代码；
+企业微展，借助微信小程序平台，打造企业/个人的在线展示平台。
 
-使用说明和常见问题，可参阅下面的说明，如还有疑问，可访问工厂官网 [https://www.it120.cc/](https://www.it120.cc/) 寻求帮助！
+本项目使用原生小程序开发，接口和后台部分直接对接的“api工厂”的saas，您也可以直接去注册账号后即可体验小程序
 
-新增直播带货支持，具体详见使用说明
+扫码体验：
 
-# 今日头条/抖音小程序版本
+<img src="https://dcdn.it120.cc/2022/12/31/4ea10b9c-4ed0-4639-a679-0108b1a85d35.jpeg" width="200px">
 
-本项目的今日头条/抖音小程序版本，请移步至下面的地址：
 
-[https://github.com/EastWorld/tt-app-mall](https://github.com/EastWorld/tt-app-mall)
+如果觉得本项目对你有帮助，帮忙点下 `star` 哦～
 
-## 扫码体验
+# 联系我
 
-<img src="https://dcdn.it120.cc/2022/12/31/0215c085-d4d1-43e4-bd7d-0e7336eaa661.jpeg" width="200px">
+<img src="https://dcdn.it120.cc/2023/10/16/78499895-dbb1-436c-a022-fb4c35438478.png" width="200px">
 
-## 详细配置/使用教程
-
-[https://www.it120.cc/help/ikfe2k.html](https://www.it120.cc/help/ikfe2k.html)
-
-**遇到使用问题？**
-
-[点击这里找答案，可用关键词搜索](https://www.it120.cc/help.html)
-
-## 其他优秀开源模板推荐
+# 其他优秀开源模板推荐
 - [天使童装](https://github.com/EastWorld/wechat-app-mall)   /  [码云镜像](https://gitee.com/javazj/wechat-app-mall)
 - [天使童装（uni-app版本）](https://github.com/gooking/uni-app-mall)  /   [码云镜像](https://gitee.com/javazj/uni-app-mall)
 - [简约精品商城（uni-app版本）](https://github.com/gooking/uni-app--mini-mall)  /   [码云镜像](https://gitee.com/javazj/uni-app--mini-mall)
 - [舔果果小铺（升级版）](https://github.com/gooking/TianguoguoXiaopu)
 - [面馆风格小程序](https://gitee.com/javazj/noodle_shop_procedures)
-- [AI名片](https://github.com/gooking/visitingCard)  /   [码云镜像](https://gitee.com/javazj/visitingCard)
+- [AI名片](https://github.com/gooking/visitingCard)
 - [仿海底捞订座排队 (uni-app)](https://github.com/gooking/dingzuopaidui)  /   [码云镜像](https://gitee.com/javazj/dingzuopaidui)
 - [H5版本商城/餐饮](https://github.com/gooking/vueMinishop)  /  [码云镜像](https://gitee.com/javazj/vueMinishop)
 - [餐饮点餐](https://github.com/woniudiancang/bee)  / [码云镜像](https://gitee.com/woniudiancang/bee)
 - [企业微展](https://github.com/gooking/qiyeweizan)  / [码云镜像](https://gitee.com/javazj/qiyeweizan)
 - [无人棋牌室](https://github.com/gooking/wurenqipai)  / [码云镜像](https://gitee.com/javazj/wurenqipai)
 - [酒店客房服务小程序](https://github.com/gooking/hotelRoomService)  / [码云镜像](https://gitee.com/javazj/hotelRoomService)
-- [面包店风格小程序](https://github.com/gooking/bread)  / [码云镜像](https://gitee.com/javazj/bread)
 
-## 联系作者
+# 如何搭建并运行该小程序
 
-| 微信好友 | QQ好友 |
-| :------: | :------: |
-| <img src="https://dcdn.it120.cc/2021/09/13/61a80363-9085-4a10-9447-e276a3d40ab3.jpeg" width="200px"> | <img src="https://dcdn.it120.cc/2021/09/13/08a598d8-8186-4159-9930-2e4908accc5e.png" width="200px"> |
+## 开通接口和后台
 
-## 本项目使用了下面的组件，在此鸣谢
+点击下面的地址，注册开通后台
 
-- [接口 SDK](https://github.com/gooking/apifm-wxapi)
+[注册并开通你自己的后台](https://admin.it120.cc/)，注册的时候，邀请码填写 `66` 哦～
 
-- [api工厂](https://admin.it120.cc)
+[《接口SDK使用说明》](https://www.yuque.com/apifm/nu0f75)
 
-- [vant-weapp](https://youzan.github.io/vant-weapp)
+## 克隆后台测试数据
 
-- [小程序富文本插件（html 渲染）](https://github.com/jin-yufeng/mp-html)
+左侧菜单，工厂设置，数据克隆，将对方数据克隆给我，填写商户号 `66` ，点击克隆即可
 
-- [小程序海报组件-生成朋友圈分享海报并生成图片](https://github.com/jasondu/wxa-plugin-canvas)
+## 配置小程序信息
 
-- [Apache ECharts](https://github.com/ecomfe/echarts-for-weixin)
+首先自行去注册开通小程序账号： https://mp.weixin.qq.com/
+完成微信认证以后，将小程序的 appID 和 secret 的信息填到：
+左侧菜单，微信设置，小程序设置
 
-底部ICON图标使用：
-https://www.iconfont.cn/collections/detail?spm=a313x.7781069.0.da5a778a4&cid=18904
+## 修改专属域名，和后台做关联
 
-  
-## 如何升级到最新版
+打开修改 `config.js` 文件，把 `subDomain` 文件改成你自己的专属域名
 
-- 小程序程序的修改和您后台的数据是独立的，所以不用担心您会丢失数据
-- 先把你开发工具下的现有版本程序备份
-- 下载最新版的程序，直接覆盖您本地的程序
-- 用开发工具修改域名 mall 为你自己的域名
-- 开发工具里面上传代码提交微信审核
-- 审核通过后，小程序后台去发布新版本即可
-- 用户无需重新扫码，关闭小程序重新打开就是新版本了
+[什么是专属域名？](https://www.it120.cc/help/qr6l4m.html)
+
+## 配置服务器合法域名
+
+[如何配置服务器合法域名？](https://www.it120.cc/help/tvpou9.html)
+
+## 添加插件
+
+如果你需要使用本小程序首页的自动加微信、自动加微信群的功能，需要在你的小程序公众号后台，添加2个插件
+- wx4d2deeab3aed6e5a
+- wx104a1a20c3f81ec2
+
+# 开发模式
+
+## 服务商模式
+
+代码默认为运行在服务商模式，通过配置根目录的 `ext.json` 文件,来调试小程序
+
+```js
+{
+  "extEnable": true,
+  "extAppid": "wx2bdf7b6e21c5049c",
+  "ext": {
+    "subDomain": "2byewu"
+  }
+}
+```
+
+服务商上传代码的时候，需要指定扩展参数：
+
+```json
+{"extEnable":true,"extAppid":"wx2bdf7b6e21c5049c","ext":{"subDomain":"2byewu"}}
+```
+
+## 普通小程序模式
+
+删除掉根目录下面的 `ext.json` 文件，然后通过配置 `config.js` 文件下的 `subDomain` 来连接到后台
+
+
+# 开发素材
+
+
+## 底部 icon 图标
+
+https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.dc64b3430&cid=21503
+
+https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.dc64b3430&cid=34515
+
+## 底部菜单颜色
+
+#375282
+
+#999999
+
+
